@@ -50,7 +50,8 @@ type alias Coordinate =
     ( Int, Int )
 
 
-{-| Convert a pair of numbers to a coordinate
+{-| Convert a pair of numbers to a coordinate. Column index goes first, then
+the row index.
 -}
 toCoordinate : Int -> Int -> Coordinate
 toCoordinate =
