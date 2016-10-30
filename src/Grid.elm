@@ -165,7 +165,7 @@ toRow =
 -}
 get : Coordinate -> Grid a -> Maybe a
 get coord grid =
-    Array.get (fst coord) grid `andThen` Array.get (snd coord)
+    Array.get (toRow coord) grid `andThen` Array.get (toColumn coord)
 
 
 {-| Overwrite the occupant at a given `Coordinate`
